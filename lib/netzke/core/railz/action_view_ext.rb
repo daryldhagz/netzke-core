@@ -74,7 +74,7 @@ module Netzke
         res = ["#{Netzke::Core.ext_uri}/build/classic/theme-#{params[:theme]}/resources/theme-#{params[:theme]}-all.css"]
 
         # Netzke-related dynamic css
-        res << "#{request.protocol}#{request.host}#{netzke_ext_path}.css"
+        res << "#{request.protocol}#{request.host}#{main_app.netzke_ext_path}.css"
 
         res += Netzke::Core.external_ext_css
 
@@ -100,7 +100,7 @@ module Netzke
         res << "#{Netzke::Core.ext_uri}/build/classic/locale/locale-#{I18n.locale}" if I18n.locale != :en
 
         # Netzke-related dynamic JavaScript
-        res << "#{request.protocol}#{request.host}#{netzke_ext_path}.js"
+        res << "#{request.protocol}#{request.host}#{main_app.netzke_ext_path}.js"
 
         javascript_include_tag(*res)
       end
