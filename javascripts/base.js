@@ -2,8 +2,6 @@
  * Client-side code for [Netzke::Base](http://www.rubydoc.info/github/netzke/netzke-core/Netzke/Base)
  * @class Netzke.Base
  */
-
-Ext.Loader.setPath('Ext.ux','#{request.protocol}#{request.host}/extjs/packages/ux/classic/src');
 Ext.define("Netzke.Base", {
   extend: 'Ext.Mixin',
 
