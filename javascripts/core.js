@@ -51,6 +51,7 @@ Ext.TabPanel.prototype.idDelimiter = "___";
 Ext.Loader.setPath('Ext.ux',location.origin+'/extjs/packages/ux/classic/src');
 // Enable quick tips
 Ext.QuickTips.init();
+Ext.require('Ext.ux.colorpick.Field')
 
 // Used in testing
 if( Netzke._pendingRequests == undefined ){
