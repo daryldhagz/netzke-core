@@ -52,7 +52,7 @@ Netzke.ControllerUrl = '#{url_root}#{Rails.application.routes.url_helpers.netzke
 Netzke.RelativeExtUrl = '#{url_root}#{Netzke::Core.ext_uri}';
 Netzke.Core.directMaxRetries = #{Netzke::Core.js_direct_max_retries};
 Netzke.Core.NotificationDelay = #{Netzke::Core.client_notification_delay};
-Ext.require('Ext.ux.colorpick.Field');
+Ext.Loader.setPath('Ext.ux','#{request.protocol}#{request.host}/extjs/packages/ux/classic/src');
 )
         end
 
