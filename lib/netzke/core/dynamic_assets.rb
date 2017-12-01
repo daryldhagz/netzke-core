@@ -46,7 +46,6 @@ module Netzke
         def initial_dynamic_javascript(form_authenticity_token)
           url_root = ActionController::Base.config.relative_url_root
           %(
-Ext.Loader.setPath('Ext.ux','#{request.protocol}#{request.host}/extjs/packages/ux/classic/src');
 Ext.Ajax.setExtraParams({authenticity_token: '#{form_authenticity_token}'});
 Ext.ns('Netzke.Core');
 Netzke.RelativeUrlRoot = '#{url_root}';

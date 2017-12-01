@@ -26,7 +26,7 @@ Netzke.exception = function(msg) {
 // Check Ext JS version: both major and minor versions must be the same
 (function(){
   var requiredVersionMajor = 6,
-      requiredVersionMinor = 0,
+      requiredVersionMinor = 2,
       extVersion = Ext.getVersion('extjs'),
       currentVersionMajor = extVersion.getMajor(),
       currentVersionMinor = extVersion.getMinor(),
@@ -48,7 +48,7 @@ Netzke.cache = [];
 
 // Because of Netzke's double-underscore notation, Ext.TabPanel should have a different id-delimiter (yes, this must be in netzke-core)
 Ext.TabPanel.prototype.idDelimiter = "___";
-
+Ext.Loader.setPath('Ext.ux',location.origin+'/extjs/packages/ux/classic/src');
 // Enable quick tips
 Ext.QuickTips.init();
 
