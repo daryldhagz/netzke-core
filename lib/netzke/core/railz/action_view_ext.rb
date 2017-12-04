@@ -71,7 +71,7 @@ module Netzke
       # Link tags for all the required stylsheets
       def netzke_css_include(params)
         # ExtJS base
-        res = ["#{Netzke::Core.ext_uri}/build/modern/theme-#{params[:theme]}/resources/theme-#{params[:theme]}-all.css"]
+        res = ["#{Netzke::Core.ext_uri}/build/classic/theme-#{params[:theme]}/resources/theme-#{params[:theme]}-all.css"]
 
         # Netzke-related dynamic css
         res << "#{request.protocol}#{request.host}#{main_app.netzke_ext_path}.css"
@@ -97,7 +97,7 @@ module Netzke
         res << (params[:minified] ? "#{Netzke::Core.ext_uri}/build/ext-all.js" : "#{Netzke::Core.ext_uri}/build/ext-all-debug.js")
 
         # Ext I18n
-        res << "#{Netzke::Core.ext_uri}/build/modern/locale/locale-#{I18n.locale}" if I18n.locale != :en
+        res << "#{Netzke::Core.ext_uri}/build/classic/locale/locale-#{I18n.locale}" if I18n.locale != :en
 
         # Netzke-related dynamic JavaScript
         res << "#{request.protocol}#{request.host}#{main_app.netzke_ext_path}.js"
